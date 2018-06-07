@@ -1,0 +1,42 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+
+  &__item {
+    height: 100%;
+  }
+
+
+  &__link {
+    white-space: nowrap;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: $c-white;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba($c-black, 0.5);
+    @include transition(color);
+    @include respond(es) {
+      font-size: 16px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    @include respond(s) {
+      font-size: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include respond(m) {
+      font-size: 24px;
+    }
+
+    &:hover {
+      color: rgba($c-white, 0.75);
+      @include transition(color);
+    }
+  }
+}

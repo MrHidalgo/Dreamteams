@@ -8,9 +8,6 @@ html,
 body {
   width: $d-all;
   min-height: 100vh;
-  @include respondTo(mobile-max) {
-    overflow-x: hidden;
-  }
 }
 
 html {

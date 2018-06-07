@@ -133,24 +133,14 @@ $boxShadowObj: (
 ///   }
 ///
 $breakpointsMedia: (
-  "mobile-max" : "(max-width: 767px)",
-  "mobile-min" : "(min-width: 290px)",
-  "mobile" : "(min-width: 290px) and (max-width: 767px)",
-  "small-mobile" : "(max-width: 575px)",
-  "large-mobile" : "(min-width: 576px) and (max-width: 767px)",
-  "tablet-max" : "(max-width: 991px)",
-  "tablet-min" : "(max-width: 768px)",
-  "tablet" : "(min-width: 768px) and (max-width: 991px)",
-  "small-desktop-max" : "(max-width: 1199px)",
-  "small-desktop-min" : "(min-width: 992px)",
-  "small-desktop" : "(min-width: 992px) and (max-width: 1199px)",
-  "medium-desktop-max": "(max-width: 1366px)",
-  "medium-desktop-min": "(min-width: 1200px)",
-  "medium-desktop" : "(min-width: 1200px) and (max-width: 1366px)",
-  "large-desktop" : "(min-width: 1367px)"
+  "es"        : "(min-width: 320px)",
+  "s"         : "(min-width: 576px)",
+  "m"         : "(min-width: 768px)",
+  "l"         : "(min-width: 992px)",
+  "el"        : "(min-width: 1200px)"
 ) !default;
 
-@mixin respondTo($name) {
+@mixin respond($name) {
   @if map-has-key($breakpointsMedia, $name) {
     @media screen and #{inspect(map-get($breakpointsMedia, $name))} {
       @content;

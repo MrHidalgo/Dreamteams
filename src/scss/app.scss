@@ -10,8 +10,8 @@
 ///
 /// GENERATED
 /// ===============
-//@import "_generated/spritePNG";
-//@import "_generated/spriteSVG";
+@import "_generated/spritePNG";
+@import "_generated/spriteSVG";
 ///
 /// SHARED
 /// ===============
@@ -25,7 +25,11 @@
 ///
 /// MACROS
 /// ===============
+@import "_macros/nav";
+@import "_macros/logo";
 ///
 /// COMPONENTS
 /// ===============
+@import "_components/header";
+@import "_components/footer";
 
