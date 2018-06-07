@@ -42,17 +42,6 @@ $sp-info-2-total-width: 286px;
 $sp-info-2-total-height: 262px;
 $sp-info-2-image: '../img/sprite.png';
 $sp-info-2: (144px, 0px, -144px, 0px, 142px, 132px, 286px, 262px, '../img/sprite.png', 'sp-info-2', );
-$sp-logo-name: 'sp-logo';
-$sp-logo-x: 148px;
-$sp-logo-y: 141px;
-$sp-logo-offset-x: -148px;
-$sp-logo-offset-y: -141px;
-$sp-logo-width: 59px;
-$sp-logo-height: 45px;
-$sp-logo-total-width: 286px;
-$sp-logo-total-height: 262px;
-$sp-logo-image: '../img/sprite.png';
-$sp-logo: (148px, 141px, -148px, -141px, 59px, 45px, 286px, 262px, '../img/sprite.png', 'sp-logo', );
 $sp-info-0-2x-name: 'sp-info-0@2x';
 $sp-info-0-2x-x: 0px;
 $sp-info-0-2x-y: 282px;
@@ -86,26 +75,15 @@ $sp-info-2-2x-total-width: 572px;
 $sp-info-2-2x-total-height: 524px;
 $sp-info-2-2x-image: '../img/sprite@2x.png';
 $sp-info-2-2x: (288px, 0px, -288px, 0px, 284px, 264px, 572px, 524px, '../img/sprite@2x.png', 'sp-info-2@2x', );
-$sp-logo-2x-name: 'sp-logo@2x';
-$sp-logo-2x-x: 296px;
-$sp-logo-2x-y: 282px;
-$sp-logo-2x-offset-x: -296px;
-$sp-logo-2x-offset-y: -282px;
-$sp-logo-2x-width: 118px;
-$sp-logo-2x-height: 90px;
-$sp-logo-2x-total-width: 572px;
-$sp-logo-2x-total-height: 524px;
-$sp-logo-2x-image: '../img/sprite@2x.png';
-$sp-logo-2x: (296px, 282px, -296px, -282px, 118px, 90px, 572px, 524px, '../img/sprite@2x.png', 'sp-logo@2x', );
 $spritesheet-width: 286px;
 $spritesheet-height: 262px;
 $spritesheet-image: '../img/sprite.png';
-$spritesheet-sprites: ($sp-info-0, $sp-info-1, $sp-info-2, $sp-logo, );
+$spritesheet-sprites: ($sp-info-0, $sp-info-1, $sp-info-2, );
 $spritesheet: (286px, 262px, '../img/sprite.png', $spritesheet-sprites, );
 $retina-spritesheet-width: 572px;
 $retina-spritesheet-height: 524px;
 $retina-spritesheet-image: '../img/sprite@2x.png';
-$retina-spritesheet-sprites: ($sp-info-0-2x, $sp-info-1-2x, $sp-info-2-2x, $sp-logo-2x, );
+$retina-spritesheet-sprites: ($sp-info-0-2x, $sp-info-1-2x, $sp-info-2-2x, );
 $retina-spritesheet: (572px, 524px, '../img/sprite@2x.png', $retina-spritesheet-sprites, );
 
 // These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
@@ -117,9 +95,7 @@ $sp-info-1-group-name: 'sp-info-1';
 $sp-info-1-group: ('sp-info-1', $sp-info-1, $sp-info-1-2x, );
 $sp-info-2-group-name: 'sp-info-2';
 $sp-info-2-group: ('sp-info-2', $sp-info-2, $sp-info-2-2x, );
-$sp-logo-group-name: 'sp-logo';
-$sp-logo-group: ('sp-logo', $sp-logo, $sp-logo-2x, );
-$retina-groups: ($sp-info-0-group, $sp-info-1-group, $sp-info-2-group, $sp-logo-group, );
+$retina-groups: ($sp-info-0-group, $sp-info-1-group, $sp-info-2-group, );
 
 // The provided mixins are intended to be used with the array-like variables
 //
