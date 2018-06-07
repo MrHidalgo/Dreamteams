@@ -1,0 +1,43 @@
+.video {
+  background-color: $c-white;
+
+
+  .container {
+    @include respond(es) {
+      padding-top: 52px;
+      padding-bottom: 40px;
+    }
+    @include respond(m) {
+      padding-top: 104px;
+      padding-bottom: 81px;
+    }
+  }
+
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    max-width: 974px;
+    margin-left: auto;
+    margin-right: auto;
+    @include respond(es) {
+      height: 320px;
+    }
+    @include respond(s) {
+      height: 420px;
+    }
+    @include respond(m) {
+      height: 500px;
+    }
+    @include respond(l) {
+      height: 555px;
+    }
+
+
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
