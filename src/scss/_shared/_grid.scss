@@ -11,35 +11,24 @@
 .container {
   @extend %container;
   width: $d-all;
+  @include respond(s) {
+    max-width: 540px;
+  }
+  @include respond(m) {
+    max-width: 720px;
+  }
+  @include respond(l) {
+    max-width: 960px;
+  }
+  @include respond(el) {
+    max-width: 1140px;
+  }
+  @include respond(w) {
+    max-width: 1400px;
+  }
 
   &-fluid {
     @extend %container;
     width: $d-all;
-  }
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1600px) {
-  .container {
-    max-width: 1400px;
   }
 }
