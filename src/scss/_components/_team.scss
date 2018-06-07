@@ -1,0 +1,38 @@
+.team {
+  background-color: $c-white;
+
+
+  &__title {
+    padding-top: 28px;
+    padding-bottom: 31px;
+  }
+
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  &__subtitle {
+    padding-top: 15px;
+    padding-bottom: 31px;
+  }
+
+
+  &__text {
+    width: 100%;
+    max-width: 1099px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond(es) {
+      padding-bottom: 65px;
+    }
+    @include respond(s) {
+      padding-bottom: 130px;
+    }
+  }
+}
