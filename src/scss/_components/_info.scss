@@ -1,0 +1,145 @@
+.info {
+  color: $c-white;
+
+  .container {
+    padding-bottom: 29px;
+    @include respond(es) {
+      padding-top: 33px;
+    }
+    @include respond(s) {
+      padding-top: 66px;
+    }
+  }
+
+
+  &__title {
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    @include respond(es) {
+      padding-bottom: 36px;
+      font-size: 24px;
+    }
+    @include respond(s) {
+      font-size: 28px;
+    }
+    @include respond(m) {
+      padding-bottom: 73px;
+      font-size: 32px;
+    }
+  }
+
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    @include respond(es) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include respond(m) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+
+  &__block {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+
+    &-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 65px;
+      height: 65px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 5px solid $c-white;
+      border-radius: 100%;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    &-text {
+      font-weight: bold;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 30px;
+      @include respond(es) {
+        font-size: 22px;
+      }
+      @include respond(m) {
+        min-height: 160px;
+      }
+      @include respond(l) {
+        min-height: 135px;
+        font-size: 24px;
+      }
+    }
+
+    &-icon {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      @include respond(es) {
+        margin-bottom: 40px;
+      }
+      @include respond(m) {
+        margin-bottom: 83px;
+      }
+
+      &-0 {
+        @include retina-sprite($sp-info-0-group);
+      }
+      &-1 {
+        @include retina-sprite($sp-info-1-group);
+      }
+      &-2 {
+        @include retina-sprite($sp-info-2-group);
+      }
+    }
+  }
+
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    border: 2px solid $c-nobel;
+    background-color: $c-energyYellow;
+    text-align: center;
+    font-weight: bold;
+    color: $c-black;
+    @include transition(color, border-color, background-color);
+    @include respond(es) {
+      max-width: 320px;
+      height: 70px;
+      font-size: 20px;
+    }
+    @include respond(s) {
+      font-size: 22px;
+    }
+    @include respond(m) {
+      height: 75px;
+      font-size: 26px;
+    }
+    @include respond(l) {
+      max-width: 360px;
+      height: 90px;
+      font-size: 32px;
+    }
+
+    &:hover {
+      color: $c-darkCerulean;
+      border-color: $c-darkCerulean;
+      background-color: $c-white;
+      @include transition(color, border-color, background-color);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// INFO :: START
+
+-
+  var infoNumArr = [
+    "1",
+    "2",
+    "3"
+  ];
+  var infoText = [
+    "Register your teams and and invite your teammates with a link",
+    "Use Slack Channels to reconnect and chat with your old teams",
+    "Get team profiles and showcase your career in a completely new way!"
+  ];
+
+#info.info
+  .container
+
+    h2.info__title!= "Get started building a community for the teams you’ve worked with!"
+
+    .info__wrap
+      -for(var i = 0, len = infoNumArr.length; i < len; i++)
+        .info__block
+          .info__block-circle
+            span!= infoNumArr[i]
+          p.info__block-text!= infoText[i]
+          i.info__block-icon(class="info__block-icon-" + i)
+
+
+    a(href="#" title="" class="info__btn")!= "Register your teams!"
+
+// INFO :: END
