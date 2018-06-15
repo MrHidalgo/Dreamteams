@@ -16,7 +16,7 @@
     },
     {
       name: "Add teams",
-      href: "team.html"
+      href: "teams.html"
     }
   ];
 
@@ -35,13 +35,13 @@ nav.nav
 
     +navItem("#", "About us", "")
 
-    if(bodyClassName === 'profile' || bodyClassName === 'team')
-      +navItem("profile.htm", "Profiles", "profile")
+    if(bodyClassName === 'profile' || bodyClassName === 'teams')
+      +navItem("profile.html", "Profiles", "profile")
 
     +navItem("#", "Logg inn", "")
 
-    if(bodyClassName === 'profile' || bodyClassName === 'team')
-      +navItem("team.html", "Add teams", "team")
+    if(bodyClassName === 'profile' || bodyClassName === 'teams')
+      +navItem("teams.html", "Add teams", "teams")
 
 
 

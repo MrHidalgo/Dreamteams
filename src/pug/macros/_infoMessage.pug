@@ -6,10 +6,24 @@
       span.infoMessage__close-line.infoMessage__close-line--0
       span.infoMessage__close-line.infoMessage__close-line--1
 
-    p.infoMessage__title.subtitle!= "Thank you for registering your teams"
-    p.infoMessage__title.subtitle.infoMessage__title--wb!= "Here is your <a href='#'>profile</a> with all your team."
+    if(bodyClassName === 'profile')
+      p.infoMessage__title.subtitle!= "Thank you for registering your teams"
+      p.infoMessage__title.subtitle.infoMessage__title--wb!= "Here is your <a href='#'>profile</a> with all your team."
 
-    p.infoMessage__text.text!= "1. Follow instruction from Slack to comfirm your email and receive your slack channel"
-    p.infoMessage__text.text!= "2. Add members by sending them the <a href='#'>team link</a>"
+      p.infoMessage__text.text!= "1. Follow instruction from Slack to comfirm your email and receive your slack channel"
+      p.infoMessage__text.text!= "2. Add members by sending them the <a href='#'>team link</a>"
+
+    else if (bodyClassName === 'teams')
+      p.infoMessage__title.subtitle!= "Thank you for registering a team!"
+      p.infoMessage__title.subtitle.infoMessage__title--wb!= "Here is your <a href='#'>team profile</a>"
+
+      p.infoMessage__text.text!= "1. Follow instruction from Slack to comfirm your email and receive your slack channel"
+      p.infoMessage__text.text!= "2. Add members by sending them this team link: <a href='#'>https://www.dreamteams.io/reg/?teamname=team-stian&secret=8Ei8L</a>"
+
+      a.infoMessage__link(href="#" copyInfo-js)!= "Copy link"
+
+
+
+
 
 // INFO MESSAGE :: END

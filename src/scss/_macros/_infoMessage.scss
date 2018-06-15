@@ -63,4 +63,20 @@
       color: #f5d846;
     }
   }
+
+  &__link {
+    display: table;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid $c-nobel;
+    background-color: $c-energyYellow;
+    text-align: center;
+    font-weight: bold;
+    color: $c-black;
+  }
 }
