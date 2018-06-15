@@ -1,11 +1,48 @@
 // NAV :: START
 
+-
+  var navItemData = [
+    {
+      name: "About us",
+      href: "#"
+    },
+    {
+      name: "Profiles",
+      href: "profile.html"
+    },
+    {
+      name: "Logg inn",
+      href: "#"
+    },
+    {
+      name: "Add teams",
+      href: "team.html"
+    }
+  ];
+
+
+mixin navItem(hrefVal, name, activeVal)
+  li.nav__item
+    a.nav__link(
+      href!= hrefVal
+      title=""
+      class!= (bodyClassName === activeVal) ? "is-active": ""
+    )!= name
+
+
 nav.nav
   ul.nav__list
-    li.nav__item
-      a(href="#" title="" class="nav__link")!= "About us"
 
-    li.nav__item
-      a(href="#" title="" class="nav__link")!= "Logg inn"
+    +navItem("#", "About us", "")
+
+    if(bodyClassName === 'profile' || bodyClassName === 'team')
+      +navItem("profile.htm", "Profiles", "profile")
+
+    +navItem("#", "Logg inn", "")
+
+    if(bodyClassName === 'profile' || bodyClassName === 'team')
+      +navItem("team.html", "Add teams", "team")
+
+
 
 // NAV :: END

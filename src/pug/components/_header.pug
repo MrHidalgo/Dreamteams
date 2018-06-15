@@ -4,10 +4,13 @@ header#header.header
   .container
 
     .header__wrap
-      .row
+      .header__row.header__row--logotype
         include ../macros/_logotype
 
-      .row
+      .header__row.header__row--nav
         include ../macros/_nav
+
+      .header__row.header__row--mobile
+        include ../macros/_hamburger
 
 // HEADER :: END

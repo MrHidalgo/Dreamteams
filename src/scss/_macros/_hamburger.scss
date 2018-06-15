@@ -1,0 +1,16 @@
+.hamburger {
+  outline: none;
+  display: flex;
+  padding: 0;
+
+  &-box {}
+
+  &-inner {
+    background-color: $c-white;
+
+    &:before,
+    &:after {
+      background-color: $c-white;
+    }
+  }
+}

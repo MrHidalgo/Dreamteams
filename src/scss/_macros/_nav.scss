@@ -1,4 +1,11 @@
 .nav {
+  @include respond(es) {
+    display: none;
+  }
+  @include respond(m) {
+    display: block;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -27,16 +34,26 @@
     }
     @include respond(s) {
       font-size: 20px;
+
+    }
+    @include respond(m) {
+      font-size: 18px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @include respond(l) {
+      font-size: 24px;
       padding-left: 20px;
       padding-right: 20px;
     }
-    @include respond(m) {
-      font-size: 24px;
-    }
 
     &:hover {
-      color: rgba($c-white, 0.75);
+      color: #f5d846;
       @include transition(color);
+    }
+
+    &.is-active {
+      color: #F5D846;
     }
   }
 }

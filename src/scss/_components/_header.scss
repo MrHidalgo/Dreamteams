@@ -15,12 +15,28 @@
   }
 
 
-  .row {
+  &__row {
     display: flex;
     width: 50%;
 
-    &:nth-child(2) {
-      justify-content: flex-end;
+    &--nav {
+      @include respond(es) {
+        display: none;
+      }
+      @include respond(m) {
+        display: flex;
+      }
+    }
+
+    &--mobile {
+      @include respond(es) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      @include respond(m) {
+        display: none;
+      }
     }
   }
 }

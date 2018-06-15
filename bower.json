@@ -26,6 +26,11 @@
         "./web-fonts-with-css/css/fontawesome-all.css",
         "./web-fonts-with-css/webfonts/*"
       ]
+    },
+    "hamburgers": {
+      "main": [
+        "./dist/hamburgers.css"
+      ]
     }
   },
   "dependencies": {

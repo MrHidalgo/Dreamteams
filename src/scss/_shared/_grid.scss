@@ -32,3 +32,19 @@
     width: $d-all;
   }
 }
+
+.c-grid {
+  @extend %container;
+  @include respond(s) {
+    max-width: 540px;
+  }
+  @include respond(m) {
+    max-width: 720px;
+  }
+  @include respond(l) {
+    max-width: 960px;
+  }
+  @include respond(el) {
+    max-width: 1140px;
+  }
+}
