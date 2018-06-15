@@ -20,6 +20,7 @@
     width: 50%;
 
     &--nav {
+      justify-content: flex-end;
       @include respond(es) {
         display: none;
       }
