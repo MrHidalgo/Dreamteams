@@ -1,0 +1,77 @@
+.user {
+  min-height: 250px;
+  box-shadow: 0 0 1px 0 rgba($c-black, 0.5);
+  @include respond(es) {
+    padding: 25px;
+  }
+  @include respond(s) {
+    padding: 50px;
+  }
+
+  &__row {
+    display: flex;
+
+    &-left {
+      display: flex;
+      width: 75%;
+      @include respond(es) {
+        flex-direction: column;
+      }
+      @include respond(s) {
+        flex-direction: row;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: flex-end;
+      width: calc(100% - 75%);
+    }
+
+    &-top {
+      margin-right: 25px;
+    }
+
+    &-bottom {}
+  }
+
+  &__img {
+    @include retina-sprite($sp-gutt-5-group);
+    @include transition(transform);
+
+    &-wrap {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 145px;
+      height: 145px;
+      border: 1px solid rgba($c-black, 0.5);
+
+      &:hover {
+        .profile__img {
+          transform: scale(1.1);
+          @include transition(transform);
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-align: left;
+    @include respond(es) {
+      padding-top: 25px;
+    }
+    @include respond(s) {
+      padding-top: 0;
+    }
+  }
+  &__subtitle {}
+  &__position {
+    font-style: italic;
+  }
+
+  &__link {
+    @include retina-sprite($sp-edit-group);
+  }
+}
