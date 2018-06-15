@@ -1,0 +1,126 @@
+.more {
+  box-shadow: 0 0 1px 0 rgba($c-black, 0.5);
+  @include respond(es) {
+    padding: 30px;
+  }
+  @include respond(s) {
+    padding: 50px;
+  }
+
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include respond(es) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    @include respond(s) {
+      flex-direction: row;
+    }
+
+    &--list {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: $c-darkCerulean;
+    @include respond(es) {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    @include respond(s) {
+      margin-top: 0;
+      font-size: 20px;
+    }
+    @include respond(m) {
+      font-size: 24px;
+    }
+  }
+
+  &__icon {
+    margin-left: 10px;
+    @include retina-sprite($sp-plus-group);
+  }
+
+
+  &__block {
+    margin-bottom: 30px;
+    &-title {
+      @include respond(es) {
+        font-size: 18px;
+      }
+      @include respond(s) {
+        font-size: 20px;
+      }
+      @include respond(m) {
+        font-size: 22px;
+      }
+    }
+
+
+    &-subtitle {
+      font-style: italic;
+      @include respond(es) {
+        font-size: 18px;
+      }
+      @include respond(s) {
+        font-size: 20px;
+      }
+      @include respond(m) {
+        font-size: 22px;
+      }
+    }
+
+
+    &-wrap {
+      display: flex;
+      align-items: flex-start;
+      @include respond(es) {
+        flex-direction: column;
+      }
+      @include respond(m) {
+        flex-direction: row;
+      }
+    }
+
+
+    &-link {
+      margin-right: 30px;
+      @include respond(es) {
+        width: 100%;
+        margin-right: 0;
+      }
+      @include respond(m) {
+        width: 477px;
+      }
+      @include respond(l) {
+        width: 630px;
+      }
+    }
+
+
+    &-btn {
+      white-space: nowrap;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: $c-darkCerulean;
+      color: #fff;
+      @include respond(es) {
+        margin-top: 15px;
+      }
+      @include respond(m) {
+        margin-top: 0;
+      }
+    }
+  }
+}
