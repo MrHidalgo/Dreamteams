@@ -1,0 +1,64 @@
+.main {
+  min-height: 250px;
+  box-shadow: 0 0 1px 0 rgba($c-black, 0.5);
+  background-color: $c-darkCerulean;
+
+
+  &__img {
+    &-wrap {}
+  }
+
+
+  &__row {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    &--title {}
+    &--link {}
+  }
+
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    &-wrap {
+      overflow: hidden;
+    }
+  }
+
+
+  &__title {
+    padding-top: 15px;
+    color: #fff;
+    text-align: center;
+  }
+
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: right;
+    color: $c-energyYellow;
+
+    &-icon {
+      margin-left: 5px;
+      @include retina-sprite($sp-bitmap-group);
+    }
+    sup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 100%;
+      background-color: red;
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+}
