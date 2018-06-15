@@ -1,0 +1,124 @@
+.description {
+  box-shadow: 0 0 1px 0 rgba($c-black, 0.5);
+
+  &__row {
+    @include respond(es) {
+      padding: 15px;
+    }
+    @include respond(m) {
+      padding: 30px 50px;
+    }
+
+    &--top {
+      box-shadow: 0 0 1px 0 rgba($c-black, 0.5);
+
+      .description__col {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+    }
+
+    &--middle {
+      .description__col {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &--bottom {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+
+  &__title {
+    @include respond(es) {
+      font-size: 18px;
+    }
+    @include respond(s) {
+      font-size: 22px;
+    }
+    @include respond(m) {
+      font-size: 24px;
+    }
+  }
+
+
+  &__edit {
+    @include retina-sprite($sp-edit-group);
+  }
+  &__plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: $c-darkCerulean;
+    @include respond(es) {
+      font-size: 16px;
+    }
+    @include respond(s) {
+      font-size: 20px;
+    }
+    @include respond(m) {
+      font-size: 24px;
+    }
+
+    i {
+      margin-left: 10px;
+      @include retina-sprite($sp-plus-group);
+    }
+  }
+
+  &__block {
+    display: flex;
+    margin-bottom: 15px;
+
+    &-left {
+      width: 150px;
+      padding-right: 15px;
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(100% - 150px);
+    }
+    &-box {
+      width: 120px;
+      height: 120px;
+      background-color: #979797;
+    }
+    &-name {
+      @include respond(es) {
+        font-size: 16px;
+      }
+      @include respond(s) {
+        font-size: 18px;
+      }
+      @include respond(m) {
+        font-size: 20px;
+      }
+    }
+    &-pos {
+      font-style: italic;
+      @include respond(es) {
+        font-size: 16px;
+      }
+      @include respond(s) {
+        font-size: 18px;
+      }
+      @include respond(m) {
+        font-size: 20px;
+      }
+    }
+    &-line {
+      width: 100%;
+      height: 1px;
+      background-color: #979797;
+    }
+  }
+}

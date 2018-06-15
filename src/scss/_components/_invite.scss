@@ -1,0 +1,64 @@
+.invite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $c-darkCerulean;
+  @include respond(es) {
+    padding: 15px;
+    flex-direction: column;
+  }
+  @include respond(s) {
+    padding: 30px;
+    flex-direction: row;
+  }
+  @include respond(m) {
+    padding: 50px;
+  }
+
+
+  &__row {
+    @include respond(es) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include respond(m) {
+      padding-right: 30px;
+    }
+  }
+
+
+  &__title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  
+  &__link {
+    color: $c-energyYellow;
+    font-weight: bold;
+    @include respond(es) {
+      font-size: 18px;
+    }
+    @include respond(m) {
+      font-size: 22px;
+    }
+  }
+
+
+  &__btn {
+    white-space: nowrap;
+    height: 32px;
+    line-height: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid $c-nobel;
+    background-color: $c-energyYellow;
+    text-align: center;
+    font-weight: bold;
+    color: $c-black;
+  }
+}
