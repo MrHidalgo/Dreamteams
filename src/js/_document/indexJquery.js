@@ -20,6 +20,8 @@ $(document).ready((ev) => {
 
   $("[hamburger-js]").on("click", function(e) {
     $(this).toggleClass("is-active");
+    $(".header__row--nav, nav").toggleClass("is-active");
+    $("html, body").toggleClass("is-scroll-hidden");
   });
 
   $("[infoMessage-js]").on("click", function(e) {

@@ -8,6 +8,10 @@ html,
 body {
   width: $d-all;
   min-height: 100vh;
+
+  &.is-scroll-hidden {
+    overflow: hidden;
+  }
 }
 
 html {
@@ -26,6 +30,7 @@ body {
   font-family: 'PT Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 
   &.profile,
   &.teams {
